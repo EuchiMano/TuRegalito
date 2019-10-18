@@ -2,10 +2,12 @@ from django.shortcuts import render, redirect
 from .models import Stock
 from .forms import StockForm
 from django.contrib import messages
+import requests
+import json
 # pk_b0b39f5427b7415bad107f7af12d6f61
 def home(request):
-    import requests
-    import json
+    
+    
 
     if request.method == 'POST':
         ticker = request.POST['ticker_symbol']
